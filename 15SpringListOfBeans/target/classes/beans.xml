@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="car" class="com.cloudsmartz.SpringListOfBeans.Car">
+		<constructor-arg>
+			<list>
+				<ref bean="wheel1"></ref>
+				<ref bean="wheel2"></ref>
+				<ref bean="wheel3"></ref>
+				<ref bean="wheel4"></ref>
+			</list>
+		</constructor-arg>
+	</bean>
+
+	<bean id="wheel1" class="com.cloudsmartz.SpringListOfBeans.Wheel">
+		<property name="name">
+			<value>MRF</value>
+		</property>
+		<property name="type">
+			<value>TUBELESS</value>
+		</property>
+	</bean>
+
+	<bean id="wheel2" class="com.cloudsmartz.SpringListOfBeans.Wheel">
+		<property name="name">
+			<value>CEAT</value>
+		</property>
+		<property name="type">
+			<value>TUBE</value>
+		</property>
+	</bean>
+
+	<bean id="wheel3" class="com.cloudsmartz.SpringListOfBeans.Wheel">
+		<property name="name">
+			<value>MRF</value>
+		</property>
+		<property name="type">
+			<value>TUBELESS</value>
+		</property>
+	</bean>
+
+	<bean id="wheel4" class="com.cloudsmartz.SpringListOfBeans.Wheel">
+		<property name="name">
+			<value>MRF</value>
+		</property>
+		<property name="type">
+			<value>TUBELESS</value>
+		</property>
+	</bean>
+
+</beans>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="answer1" class="com.cloudsmartz.SpringListOfBeans.Answer">
+		<property name="answerId" value="1"></property>
+		<property name="answer" value="Framework"></property>
+	</bean>
+	<bean id="answer2" class="com.cloudsmartz.SpringListOfBeans.Answer">
+		<property name="answerId" value="2"></property>
+		<property name="answer" value="Framework Of Frameworks"></property>
+	</bean>
+	<bean id="question" class="com.cloudsmartz.SpringListOfBeans.Question">
+		<property name="questionId" value="101"></property>
+		<property name="question" value="What is Spring"></property>
+	</bean>
+	<bean id="user" class="com.cloudsmartz.SpringListOfBeans.User">
+		<property name="answers">
+			<map>
+				<entry key-ref="answer1" value-ref="question"></entry>
+				<entry key-ref="answer2" value-ref="question"></entry>
+			</map>
+		</property>
+	</bean>
+
+</beans>

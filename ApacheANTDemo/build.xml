@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Apache ANT Demo" default="info">
+
+	<property file="prop.properties" />
+
+	<target name="info">
+		<echo>Project Name is ${demo.name} - on ${demo.date} </echo>
+		<echo>Ant File is: ${ant.file}</echo>
+		<echo>Ant File is: ${ant.version}</echo>
+		<echo>Ant File is: ${basedir}</echo>
+		<echo>Ant File is: ${ant.java.version}</echo>
+		<echo>Ant File is: ${ant.project.name}</echo>
+		<echo>Ant File is: ${ant.project.default-target}</echo>
+	</target>
+
+</project>

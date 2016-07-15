@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="car" class="com.cloudsmartz.SpringListOfBeans.demo2.Car">
+		<constructor-arg>
+			<bean class="com.cloudsmartz.SpringListOfBeans.demo2.Engine">
+				<constructor-arg type="int" name="engineId">
+					<value>1</value>
+				</constructor-arg>
+				<constructor-arg type="String" name="name">
+					<value>EPF</value>
+				</constructor-arg>
+				<constructor-arg type="long" name="horsePower">
+					<value>5563</value>
+				</constructor-arg>
+			</bean>
+		</constructor-arg>
+	</bean>
+
+</beans>
