@@ -1,6 +1,7 @@
-package com.gagan.spring;
+package com.gagan.spring.test;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 public class MyLogger {
 
@@ -9,23 +10,19 @@ public class MyLogger {
 	private MyFileWriter myFileWriter;
 
 	@Autowired
-	public MyLogger(MyConsoleWriter myConsoleWriter, MyFileWriter myFileWriter) {
-		super();
-		this.myConsoleWriter = myConsoleWriter;
-		this.myFileWriter = myFileWriter;
-	}
-
+//	@Qualifier("toConsole")
 	public void setMyConsoleWriter(MyConsoleWriter myConsoleWriter) {
 		this.myConsoleWriter = myConsoleWriter;
 	}
 
-	// @Autowired
+	@Autowired
 	public void setMyFileWriter(MyFileWriter myFileWriter) {
 		this.myFileWriter = myFileWriter;
 	}
 
 	public void writeConsole(String text) {
-		myConsoleWriter.write(text);
+		if (myConsoleWriter != null)
+			myConsoleWriter.write(text);
 	}
 
 	public void writeFile(String text) {
